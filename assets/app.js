@@ -306,8 +306,8 @@
   // ------------------------------------------------------------
   function setActiveTab(name) {
     state.tab = name;
-    if (name !== 'environments') state.envPath = [];
-    if (name !== 'native') state.nativePath = [];
+    state.envPath = [];
+    state.nativePath = [];
     writeHash();
     render();
   }
