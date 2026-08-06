@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PSN Helper Tool — Environment URLs, native builds, user creation, and system links across all PokerStars partners." />
+  <title>PSN Helper Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A0%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="table-felt" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-suit" aria-hidden="true">
+        <span class="suit suit-spade">&spades;</span>
+        <span class="suit suit-heart">&hearts;</span>
+        <span class="suit suit-club">&clubs;</span>
+        <span class="suit suit-diamond">&diams;</span>
+      </span>
+      <div class="brand-text">
+        <h1>PSN Helper</h1>
+        <p>Environments · Builds · Users · Systems</p>
+      </div>
+    </div>
+
+    <nav class="tabs" role="tablist" aria-label="Main sections">
+      <button class="tab" role="tab" aria-selected="true" data-tab="environments">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1.42 0 2.94 1.72 3.68 4.5H8.32C9.06 5.72 10.58 4 12 4zM4.26 10.5H7.7a19 19 0 000 3H4.26a8 8 0 010-3zm.9-2A8 8 0 019 4.86a11.4 11.4 0 00-1.9 3.64H5.16zm14.68 0h-1.94A11.4 11.4 0 0015 4.86a8 8 0 013.84 3.64zM9.72 10.5h4.56a17 17 0 010 3H9.72a17 17 0 010-3zm-.94 5H15.22c-.74 2.78-2.26 4.5-3.68 4.5s-2.94-1.72-3.68-4.5zM7.1 15.5c.4 1.4 1.02 2.7 1.9 3.64A8 8 0 015.16 15.5zm9.9 3.64c.88-.94 1.5-2.24 1.9-3.64h2A8 8 0 0117 19.14zm.6-5.64a19 19 0 000-3h3.44a8 8 0 010 3z"/></svg>
+        Environments
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="native">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2zm-5 19a1 1 0 110-2 1 1 0 010 2zm5-4H7V4h10z"/></svg>
+        Native Builds
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="users">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M15 12a4 4 0 10-4-4 4 4 0 004 4zm0 2c-3.31 0-6 1.79-6 4v2h12v-2c0-2.21-2.69-4-6-4zM7 12a3 3 0 100-6 3 3 0 000 6zm-.5 2C4.02 14 0 15.24 0 17.75V20h7v-2c0-1.47.66-2.72 1.76-3.66A9.4 9.4 0 006.5 14z"/></svg>
+        Create User
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="systems">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"/></svg>
+        Main System
+      </button>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <!-- ENVIRONMENTS -->
+    <section class="panel" role="tabpanel" data-panel="environments" aria-hidden="false">
+      <div class="panel-head">
+        <h2>Brand / Environment URLs</h2>
+        <nav class="breadcrumbs" id="env-crumbs" aria-label="Environment navigation"></nav>
+      </div>
+      <div class="panel-body" id="env-body"></div>
+    </section>
+
+    <!-- NATIVE BUILDS -->
+    <section class="panel" role="tabpanel" data-panel="native" aria-hidden="true">
+      <div class="panel-head">
+        <h2>Native Builds</h2>
+        <nav class="breadcrumbs" id="native-crumbs" aria-label="Native builds navigation"></nav>
+      </div>
+      <div class="panel-body" id="native-body"></div>
+    </section>
+
+    <!-- CREATE USER -->
+    <section class="panel" role="tabpanel" data-panel="users" aria-hidden="true">
+      <div class="panel-head">
+        <h2>Create User</h2>
+      </div>
+      <div class="panel-body" id="users-body"></div>
+    </section>
+
+    <!-- MAIN SYSTEM -->
+    <section class="panel" role="tabpanel" data-panel="systems" aria-hidden="true">
+      <div class="panel-head">
+        <h2>Main System</h2>
+      </div>
+      <div class="panel-body" id="systems-body"></div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <span>All-in on productivity &spades;</span>
+    <span class="foot-sep">&middot;</span>
+    <span>Static site &middot; GitHub Pages</span>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
