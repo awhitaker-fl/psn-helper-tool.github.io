@@ -78,11 +78,11 @@
   const ENV_META = {
     PR:        { label: 'Production',   sub: 'Live production traffic',    tone: 'red' },
     QC:        { label: 'QC',           sub: 'QA core environment',        tone: 'gold' },
-    SPADEQA02: { label: 'SpadeQA 02',   sub: 'Certification environment',  tone: 'gold' },
-    SPADEQA03: { label: 'SpadeQA 03',   sub: 'Preprod / staging',          tone: 'gold' },
-    SPADEQA04: { label: 'SpadeQA 04',   sub: 'Preprod / staging',          tone: 'gold' },
-    SPADEQA05: { label: 'SpadeQA 05',   sub: 'Preprod / staging',          tone: 'gold' },
-    SPADEQA06: { label: 'SpadeQA 06',   sub: 'Preprod / staging',          tone: 'gold' },
+    SPADEQA02: { label: 'SPADEQA02',    sub: 'Certification environment',  tone: 'gold' },
+    SPADEQA03: { label: 'SPADEQA03',    sub: 'Preprod / staging',          tone: 'gold' },
+    SPADEQA04: { label: 'SPADEQA04',    sub: 'Preprod / staging',          tone: 'gold' },
+    SPADEQA05: { label: 'SPADEQA05',    sub: 'Preprod / staging',          tone: 'gold' },
+    SPADEQA06: { label: 'SPADEQA06',    sub: 'Preprod / staging',          tone: 'gold' },
   };
 
   // ------------------------------------------------------------
@@ -92,9 +92,9 @@
     'BE-PS':    { QC: 'https://www-pokerstars-be-qa.pragmatic.starsweb.io', SPADEQA02: 'https://www-pokerstars-de-cert.pragmatic.starsweb.io' },
     'BG-PS':    { QC: 'https://www-pokerstars-bg-qa.pragmatic.starsweb.io' },
     'COM-BF':   { QC: 'https://poker.betfair.com.nxt.ppbdev.com' },
-    'COM-PP':   { QC: 'https://www.paddypower.com.nxt.ppbdev.com' },
+    'COM-PP':   { QC: 'https://poker.paddypower.com.nxt.ppbdev.com', PR: 'https://poker.paddypower.com' },
     'COM-PS':   { QC: 'https://www-pokerstars-com-qa.pragmatic.starsweb.io', SPADEQA02: 'https://www-pokerstars-com-cert.pragmatic.starsweb.io' },
-    'COM-SBG':  { QC: 'https://skybet.com.nxt.ppbdev.com' },
+    'COM-SBG':  { QC: 'https://skypoker.com.nxt.ppbdev.com', PR: 'https://skypoker.com' },
     'DE-PS':    { QC: 'https://www-pokerstars-de-qa.pragmatic.starsweb.io', SPADEQA02: 'https://www-pokerstars-de-cert.pragmatic.starsweb.io' },
     'DK-PS':    { QC: 'https://www-pokerstars-dk-qa.pragmatic.starsweb.io', SPADEQA02: 'https://www-pokerstars-dk-cert.pragmatic.starsweb.io' },
     'EE-PS':    { QC: 'https://www-pokerstars-ee-qa.pragmatic.starsweb.io', SPADEQA02: 'https://www-pokerstars-ee-cert.pragmatic.starsweb.io' },
@@ -109,8 +109,8 @@
     'SISAL-IT': { QC: 'https://test-www.sisal.it', SPADEQA06: 'https://preprod-www.sisal.it', PR: 'https://www.sisal.it' },
     'SNAI-IT':  { QC: 'https://test-www-snai.flutterseatech.it', SPADEQA06: 'https://preprod-www-snai.flutterseatech.it', PR: 'https://www.snai.it' },
     'UK-BF':    { QC: 'https://poker.betfair.com.nxt.ppbdev.com' },
-    'UK-PP':    { QC: 'https://www.paddypower.com.nxt.ppbdev.com' },
-    'UK-SBG':   { QC: 'https://skybet.com.nxt.ppbdev.com' },
+    'UK-PP':    { QC: 'https://poker.paddypower.com.nxt.ppbdev.com', PR: 'https://poker.paddypower.com' },
+    'UK-SBG':   { QC: 'https://skypoker.com.nxt.ppbdev.com', PR: 'https://skypoker.com' },
   };
 
   const POKER_BASE_URLS = {
@@ -144,11 +144,11 @@
   const ARTIFACTORY_TARGETS = [
     { key: 'PR',        label: 'PR',          sub: 'Pull request builds' },
     { key: 'QA_CORE',   label: 'QA_CORE',     sub: 'QA core packages' },
-    { key: 'SPADEQA02', label: 'SPADEQA02',   sub: 'Spade QA 02' },
-    { key: 'SPADEQA03', label: 'SPADEQA03',   sub: 'Spade QA 03' },
-    { key: 'SPADEQA04', label: 'SPADEQA04',   sub: 'Spade QA 04' },
-    { key: 'SPADEQA05', label: 'SPADEQA05',   sub: 'Spade QA 05' },
-    { key: 'SPADEQA06', label: 'SPADEQA06',   sub: 'Spade QA 06' },
+    { key: 'SPADEQA02', label: 'SPADEQA02',   sub: 'SPADEQA02' },
+    { key: 'SPADEQA03', label: 'SPADEQA03',   sub: 'SPADEQA03' },
+    { key: 'SPADEQA04', label: 'SPADEQA04',   sub: 'SPADEQA04' },
+    { key: 'SPADEQA05', label: 'SPADEQA05',   sub: 'SPADEQA05' },
+    { key: 'SPADEQA06', label: 'SPADEQA06',   sub: 'SPADEQA06' },
   ];
 
   const NATIVE_ROOT = [
